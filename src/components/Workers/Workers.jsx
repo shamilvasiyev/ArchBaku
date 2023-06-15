@@ -9,42 +9,42 @@ import styles from "./Workers.module.scss";
 const workers = [
   {
     id: "1",
-    img: "src/assets/workers/w-1.png",
+    img: "/assets/workers/w-1.png",
     name: "Adil mehdiyev",
     specialty: "İnşaat mühəndisi",
     experience: "2 il",
   },
   {
     id: "2",
-    img: "src/assets/workers/w-2.png",
+    img: "/assets/workers/w-2.png",
     name: "Rafiq Rzayev",
     specialty: "Texniki təhlükəsizlik üzrə mütəxəssis",
     experience: "15 ildən çox",
   },
   {
     id: "3",
-    img: "src/assets/workers/w-3.png",
+    img: "/assets/workers/w-3.png",
     name: "Zaur Mikayılov",
     specialty: "Geodeziya üzrə mütəxəssis",
     experience: "5 il",
   },
   {
     id: "4",
-    img: "src/assets/workers/w-4.png",
+    img: "/assets/workers/w-4.png",
     name: "Rəşad İbrahimov",
     specialty: "Geodeziya cihazı üzrə operator",
     experience: "3 il",
   },
   {
     id: "5",
-    img: "src/assets/workers/w-5.png",
+    img: "/assets/workers/w-5.png",
     name: "Elnur Mehtiyev",
     specialty: "Sahə rəisi",
     experience: "1 il",
   },
   {
     id: "6",
-    img: "src/assets/workers/w-6.png",
+    img: "/assets/workers/w-6.png",
     name: "Cəmil Bayramov",
     specialty: "Sahə rəisi",
     experience: "1 il",
@@ -65,7 +65,14 @@ const Workers = () => {
           {workers.map((d) => (
             <div key={d.id} className={styles["worker-card"]}>
               <div className={styles["worker-image"]}>
-                <img src={d.img} alt={d.name} />
+                <img
+                  src={`${
+                    import.meta.env.MODE === "development"
+                      ? `src/${d.img}`
+                      : `../../../dist/${d.img}`
+                  }`}
+                  alt={d.name}
+                />
               </div>
 
               <div className={`${styles["worker-info"]} bg-image`}>
