@@ -14,7 +14,14 @@ const ProjectSliderItem = ({ cardInfo }) => {
         to={`/projects/${cardInfo?.id}`}
         className={styles["card-home-image"]}
       >
-        <img src={cardInfo?.img} alt={cardInfo?.title} />
+        <img
+          src={
+            import.meta.env.MODE === "development"
+              ? `src/${cardInfo?.img}`
+              : cardInfo?.img
+          }
+          alt={cardInfo?.title}
+        />
       </Link>
 
       <div

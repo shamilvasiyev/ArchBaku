@@ -27,7 +27,14 @@ const TechnicsSliderItem = ({ cardInfo }) => {
         id={cardInfo?.id}
       >
         <div className={styles["card-image"]}>
-          <img src={cardInfo?.img} alt={cardInfo?.title} />
+          <img
+            src={
+              import.meta.env.MODE === "development"
+                ? `src/${cardInfo?.img}`
+                : cardInfo?.img
+            }
+            alt={cardInfo?.title}
+          />
         </div>
 
         <div className={styles["card-text"]}>

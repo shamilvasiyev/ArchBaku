@@ -1,6 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { getWorkers } from "../../api/sendRequest";
-
 import bg1 from "../../assets/background/worker-bg-1.png";
 import bg2 from "../../assets/background/worker-bg-2.png";
 
@@ -68,8 +65,8 @@ const Workers = () => {
                 <img
                   src={`${
                     import.meta.env.MODE === "development"
-                      ? `src/${d.img}`
-                      : `../../../dist/${d.img}`
+                      ? `/src${d.img}`
+                      : `${d.img}`
                   }`}
                   alt={d.name}
                 />

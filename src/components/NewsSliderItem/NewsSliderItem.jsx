@@ -10,7 +10,14 @@ const NewsSliderItem = ({ cardInfo }) => {
   return (
     <div className={styles["card"]}>
       <Link to={`/news/${cardInfo?.id}`} className={styles["card-image"]}>
-        <img src={cardInfo?.img} alt={cardInfo?.title} />
+        <img
+          src={
+            import.meta.env.MODE === "development"
+              ? `src/${cardInfo?.img}`
+              : cardInfo?.img
+          }
+          alt={cardInfo?.title}
+        />
       </Link>
 
       <div className={styles["card-content"]}>
