@@ -1,0 +1,26 @@
+.card {
+  .card-image {
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .card-text {
+    text-align: center;
+    padding: 18px 0;
+    background-color: #fff;
+
+    p {
+      font-size: 18px;
+      color: var(--black);
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

@@ -1,0 +1,220 @@
+.nav_wrapper {
+  .nav-top {
+    padding: 15px 0;
+    background-image: url("../../assets/background/nav.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .nav-contact {
+      .nav-contact-left {
+        gap: 20px;
+
+        p {
+          span {
+            font-family: roboto-400;
+            font-size: 13px;
+            color: #fff;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .nav-contact-social {
+        a {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          margin-right: 20px;
+
+          &:last-of-type {
+            margin: 0;
+          }
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-main {
+    background-color: #fff;
+    width: 100%;
+
+    .nav-main-wrapper {
+      .nav-logo {
+        padding: 20px 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .nav-links {
+        gap: 30px;
+
+        a {
+          font-family: roboto-400;
+          color: var(--gray);
+          font-size: 18px;
+          height: 100%;
+          position: relative;
+          font-weight: 400;
+
+          &::before {
+            content: "";
+            left: -10px;
+            top: 50%;
+            position: absolute;
+            background: var(--gray);
+            height: 4px;
+            width: 4px;
+            border-radius: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+        .link-active {
+          color: var(--brown);
+          background-color: var(--light-gray);
+          border-bottom: 2px solid var(--brown);
+          padding: 0 20px;
+          font-weight: 600;
+
+          &::before {
+            left: 10px;
+          }
+        }
+      }
+
+      .navbar-hamburger {
+        background: transparent;
+        border: none;
+        padding: 0;
+        height: 30px;
+        width: 30px;
+        align-self: center;
+        display: none;
+
+        svg {
+          width: 100%;
+          height: 100%;
+
+          rect {
+            fill: var(--green);
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+}
+
+@media screen and (max-width: 1150px) {
+  .nav_wrapper {
+    .nav-main {
+      .nav-main-wrapper {
+        .nav-links {
+          gap: 25px;
+
+          a {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav_wrapper {
+    .nav-main {
+      position: relative;
+
+      .nav-main-wrapper {
+        .nav-logo {
+          padding: 15px 0;
+        }
+
+        .nav-links {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          padding: 20px;
+          top: 100%;
+          background: #fff;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          height: 0;
+          visibility: hidden;
+          opacity: 0;
+          z-index: 9;
+
+          a {
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+
+            &::before {
+              content: none;
+            }
+          }
+
+          .link-active {
+            padding: 10px;
+            color: var(--black);
+            background-color: transparent;
+          }
+        }
+
+        .navbar-hamburger {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav_wrapper {
+    .nav-top {
+      .nav-contact {
+        .nav-contact-left {
+          display: none;
+        }
+
+        .nav-contact-social {
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .nav_wrapper {
+    .nav-main {
+      .nav-main-wrapper {
+        .nav-logo {
+          max-width: 120px;
+        }
+
+        .navbar-hamburger {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+  }
+}

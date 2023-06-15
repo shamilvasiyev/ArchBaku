@@ -1,0 +1,40 @@
+.contact-social {
+  width: fit-content;
+  gap: 18px;
+  margin: 70px auto 0;
+
+  a {
+    padding: 10px;
+    border: 1px solid var(--green);
+    border-radius: 4px;
+
+    svg {
+      width: 25px;
+      height: 25px;
+
+      path {
+        fill: var(--green);
+      }
+    }
+  }
+}
+
+.home-page-social {
+  gap: 15px;
+  width: fit-content;
+
+  a {
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+
+    svg {
+      height: 20px;
+      width: 20px;
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}

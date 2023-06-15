@@ -1,0 +1,82 @@
+.workers {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0;
+  background: #fbf9f8;
+
+  h2 {
+    margin: 0 auto;
+
+    &:after {
+      left: 50%;
+      translate: -50%;
+    }
+  }
+
+  .worker-bg-1,
+  .worker-bg-2 {
+    position: absolute;
+    z-index: 0;
+  }
+
+  .worker-bg-1 {
+    top: 0;
+    right: 0;
+  }
+
+  .worker-bg-2 {
+    left: 0;
+    top: auto;
+    bottom: 0;
+  }
+
+  .workers-wrapper {
+    width: 70%;
+    margin: 0 auto;
+
+    .workers-content {
+      position: relative;
+      z-index: 9;
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+      gap: 60px;
+
+      .worker-card {
+        .worker-image {
+          img {
+            width: 100%;
+          }
+        }
+
+        .worker-info {
+          background: url("../../assets/background/workers-card-bg.png");
+          padding: 15px 0;
+          color: #fff;
+          text-align: center;
+
+          h4,
+          p,
+          span {
+            line-height: 24px;
+          }
+
+          h4 {
+            font-size: 20px;
+            text-transform: capitalize;
+          }
+
+          p,
+          span {
+            font-size: 14px;
+            font-weight: 400;
+          }
+
+          p {
+            margin: 7px 0 4px;
+          }
+        }
+      }
+    }
+  }
+}
