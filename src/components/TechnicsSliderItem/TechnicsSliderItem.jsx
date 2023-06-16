@@ -4,7 +4,7 @@ import ItemModal from "../Modal/Modal";
 import styles from "./TechnicsSliderItem.module.scss";
 import { Fragment, useState } from "react";
 
-const TechnicsSliderItem = ({ cardInfo }) => {
+const TechnicsSliderItem = ({ cardInfo = {} }) => {
   const [open, setOpen] = useState(false);
   const [data, setData] = useState({});
 

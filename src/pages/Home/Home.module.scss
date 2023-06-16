@@ -85,8 +85,8 @@ main {
   }
 
   .map {
-    img {
-      width: 100%;
+    iframe {
+      height: 550px;
     }
   }
 }
@@ -121,6 +121,12 @@ main {
       p {
         margin: 20px auto 30px;
         width: 80%;
+      }
+    }
+
+    .map {
+      iframe {
+        height: 400px;
       }
     }
   }

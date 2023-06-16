@@ -12,7 +12,6 @@ import { ReactComponent as Arrow } from "../../assets/icons/arrow-left.svg";
 import Workers from "../../components/Workers/Workers";
 import Contact from "../../components/Contact/Contact";
 
-import map from "../../assets/background/map.png";
 import { useEffect, useState } from "react";
 
 // const projects = [
@@ -270,17 +269,13 @@ const Home = () => {
       <Contact page="HOME" />
 
       <div className={styles["map"]}>
-        {/* <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2327.2352246382134!2d49.83058300972248!3d40.36628381942418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307dc9f457d207%3A0x7078d012b23ef1d1!2sMuseum%20of%20Miniature%20Books!5e0!3m2!1sen!2saz!4v1685197468827!5m2!1sen!2saz"
-          width="100%"
-          height="450"
-          style="border:0;"
-          allowfullscreen=""
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5738.56846943051!2d49.83117199353139!3d40.36672863176927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307dca0a08ddf5%3A0xddd20fe143a690b6!2sIcherisheher!5e0!3m2!1sen!2saz!4v1686904691985!5m2!1sen!2saz"
+          style={{ border: "0", width: "100%" }}
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe> */}
-
-        <img src={map} alt="" />
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </main>
   );

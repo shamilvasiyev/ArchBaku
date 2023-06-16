@@ -2,8 +2,6 @@ import { get, post } from "./request";
 
 // GET Data
 
-console.log(import.meta.env.VITE_BASE_URL);
-
 export const getProjects = () =>
   get(`${import.meta.env.VITE_BASE_URL}/projects`);
 
